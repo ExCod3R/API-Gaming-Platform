@@ -16,7 +16,7 @@ jobs:
       - name: Install SSH key
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.ANONROOT }}
+          ssh-private-key: ${{ secrets.GAMEPVTSSH }}
 
       - name: Deploy Website
         run: |
