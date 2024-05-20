@@ -1,4 +1,4 @@
-name: Deploy Website to AWS #Test1
+name: Deploy Website to AWS #Test2
 
 on:
   push:
