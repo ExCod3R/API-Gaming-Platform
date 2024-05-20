@@ -1,14 +1,14 @@
-name: Deploy Website to AWS #Test5
+name: Periodic PHP Deployment
 
 on:
-  push:
-    branches:
-      - dev  # Change this to the branch you want to deploy from
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour, adjust as needed
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -26,5 +26,7 @@ jobs:
           password: ${{ secrets.GAMEPVTSSH }}  # Or use private key authentication
           port: ${{ secrets.DEPLOY_PORT }}  # Specify the SSH port
           script: |
+            cd /var/www/html/api.gamepvt.com
+            git pull origin dev
             sudo su
             sudo supervisorctl restart all
