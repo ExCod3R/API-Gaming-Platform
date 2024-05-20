@@ -1,0 +1,23 @@
+name: Deploy Website to AWS #delete exitince files
+
+on:
+  push:
+    branches:
+      - dev  # Change this to the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.ANONROOT }}
+
+      - name: Deploy Website
+        run: |
+          scp -o StrictHostKeyChecking=no -r ./* ec2-user@18.141.55.112:/var/www/html/api.gamepvt.com/   
