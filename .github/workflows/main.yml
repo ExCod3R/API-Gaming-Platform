@@ -1,4 +1,4 @@
-name: Periodic PHP Deployment #Test2
+name: Periodic PHP Deployment #Test
 
 on:
   push:
