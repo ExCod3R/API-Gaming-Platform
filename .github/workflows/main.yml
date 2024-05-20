@@ -20,4 +20,4 @@ jobs:
 
       - name: Deploy Website
         run: |
-          scp -o StrictHostKeyChecking=no -r ./home/ec2-user/.ssh* root@18.141.55.112:/var/www/html/api.gamepvt.com/   
+          scp -o StrictHostKeyChecking=no -r ./* root@18.141.55.112:/var/www/html/api.gamepvt.com/   
