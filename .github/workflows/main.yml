@@ -18,12 +18,13 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.GAMEPVTSSH }}
 
-      - name: Deploy Website
-        run: |
-          scp -o StrictHostKeyChecking=no -r ./* ec2-user@18.141.55.112:/var/www/html/api.gamepvt.com/       
-
-      - name: supervisor restart all
-        run: |
-          sudo supervisorctl restart all     
-
-          
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.18.141.55.112 }}
+          username: ${{ secrets.ec2-user }}
+          password: ${{ secrets.GAMEPVTSSH }}  # Or use private key authentication
+          port: ${{ secrets.22 }}  # Specify the SSH port
+          script: |
+            sudo su
+            sudo supervisorctl restart all
