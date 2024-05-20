@@ -20,6 +20,5 @@ jobs:
 
       - name: Deploy Website
         run: |
-          scp -o StrictHostKeyChecking=no -r ./* ec2-user@18.141.55.112:/var/www/html/api.gamepvt.com/ 
-        run: |
-          sudo supervisorctl restart all    
+          scp -o StrictHostKeyChecking=no -r ./* ec2-user@18.141.55.112:/var/www/html/api.gamepvt.com/       
+          
