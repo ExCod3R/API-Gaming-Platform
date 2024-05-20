@@ -21,10 +21,10 @@ jobs:
       - name: SSH Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.18.141.55.112 }}
-          username: ${{ secrets.ec2-user }}
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GAMEPVTSSH }}  # Or use private key authentication
-          port: ${{ secrets.22 }}  # Specify the SSH port
+          port: ${{ secrets.DEPLOY_PORT }}  # Specify the SSH port
           script: |
             sudo su
             sudo supervisorctl restart all
