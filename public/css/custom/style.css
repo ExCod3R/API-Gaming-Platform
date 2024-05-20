@@ -1,0 +1,258 @@
+:root {
+    --gold: rgb(253, 199, 27);
+    --white: #fff;
+    --fadeWhite: #e5ebf7;
+    --primaryColor: #089cfe;
+    --secondaryColor: #02436d;
+    --fadeText: #bac9de;
+    --inputBg: #2d2d2d;
+    --borderColor: #cfd6df;
+    --backgroundColor: #1b1b1b;
+    --pvtBgRed: #1a2d39;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+.score-section {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    max-width: 1200px;
+    height: 630px;
+    max-height: 630px;
+    margin: 0 auto;
+}
+
+.score-section .score-section-bg {
+    z-index: 1;
+}
+
+.score-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.score-table {
+    padding: 7px 15px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+}
+
+.score-table table {
+    font-size: 20px;
+    text-align: start;
+    font-style: italic;
+    margin-bottom: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.score-table table thead tr th {
+    position: relative;
+    color: var(--secondaryColor);
+    line-height: 1;
+    border: none !important;
+    background: rgb(255, 255, 255, 0.8);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(241, 244, 251, 0.8) 50%,
+        rgba(229, 235, 247, 0.8) 100%
+    );
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+}
+
+.score-table table thead tr th::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    width: 2px;
+    height: calc(100% - 4px);
+    opacity: 0.6;
+    background-color: var(--secondaryColor);
+    transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    -o-transform: skewX(-10deg);
+}
+
+.score-table table thead tr th:first-child {
+    padding-right: 15px;
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -ms-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+}
+
+.score-table table thead tr th:last-child {
+    border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+}
+
+.score-table table thead tr th:last-child::after {
+    content: unset;
+}
+
+.score-table table tbody tr th {
+    position: relative;
+    color: var(--secondaryColor);
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1;
+    z-index: 2;
+    vertical-align: middle;
+    border: none !important;
+    background: rgb(255, 255, 255, 0.8);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(241, 244, 251, 0.8) 50%,
+        rgba(229, 235, 247, 0.8) 100%
+    );
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -ms-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+}
+
+.score-table table tbody tr th::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 10px;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.8);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(241, 244, 251, 0.8) 50%,
+        rgba(229, 235, 247, 0.8) 100%
+    );
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+    transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -ms-transform: skewX(-10deg);
+    -o-transform: skewX(-10deg);
+}
+
+.score-table table tbody tr td {
+    position: relative;
+    color: var(--secondaryColor);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    border: none !important;
+    background: rgb(255, 255, 255, 0.6);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(241, 244, 251, 0.6) 50%,
+        rgba(229, 235, 247, 0.6) 100%
+    );
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+}
+
+.score-table table tbody tr td:last-child {
+    border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+}
+
+.score-table table tbody tr:first-child td {
+    color: var(--white);
+    background-color: rgba(253, 199, 27, 0.7);
+    background: linear-gradient(
+        180deg,
+        rgba(253, 199, 27, 0.7) 0%,
+        rgba(253, 199, 27, 0.7) 50%,
+        rgba(253, 199, 27, 0.7) 100%
+    );
+}
+
+.score-table table tbody tr:nth-child(2) td {
+    color: var(--white);
+    background-color: rgb(167, 166, 167, 0.7);
+    background: linear-gradient(
+        180deg,
+        rgba(167, 166, 167, 0.7) 0%,
+        rgba(167, 166, 167, 0.7) 50%,
+        rgba(167, 166, 167, 0.7) 100%
+    );
+}
+
+.score-table table tbody tr:nth-child(3) td {
+    color: var(--white);
+    background-color: rgb(205, 158, 110, 0.7);
+    background: linear-gradient(
+        180deg,
+        rgba(205, 158, 110, 0.7) 0%,
+        rgba(205, 158, 110, 0.7) 50%,
+        rgba(205, 158, 110, 0.7) 100%
+    );
+}
+
+.score-board-user-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    border: 3px solid var(--white);
+}
+
+.score-board-user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: center center;
+    -o-object-position: center center;
+}
+
+/* .score-table table tbody tr td .center-span {
+    display: inline-block;
+    margin: 0 auto;
+} */
